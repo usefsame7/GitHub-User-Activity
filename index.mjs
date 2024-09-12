@@ -6,9 +6,6 @@ import dotenv from 'dotenv';
 import { Octokit } from '@octokit/core';        
 
 
-
-
-
 // Access command-line arguments
 const args = process.argv.slice(2);
 
@@ -42,7 +39,7 @@ if (args.length === 0) {
                       },
                   });
 
-
+                  // log the events
                   response.data.forEach((event) => {
                     let action;
                     switch (event.type) {
@@ -68,13 +65,6 @@ if (args.length === 0) {
                     }
                     console.log(`- ${action}`);
                   });
-
-
-
-
-                //   // Log the events
-                //   console.log(response.data);
-
 
 
               } catch (error) {
