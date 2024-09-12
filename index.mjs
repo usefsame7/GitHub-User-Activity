@@ -39,7 +39,7 @@ if (args.length === 0) {
                       },
                   });
 
-                  // log the events
+                  // log user events
                   response.data.forEach((event) => {
                     let action;
                     switch (event.type) {
